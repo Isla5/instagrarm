@@ -2,8 +2,6 @@ PRAGMA foreign_keys = ON;
 
 CREATE TABLE account (
     id INTEGER PRIMARY KEY autoincrement,
-
-    username TEXT NOT NULL,
     email TEXT NOT NULL,
     -- Holds a bcrypted hash
     hashed_password TEXT NOT NULL
