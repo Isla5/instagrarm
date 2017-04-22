@@ -3,6 +3,7 @@ import TextField from 'material-ui/TextField';
 import Divider from 'material-ui/Divider';
 import Paper from 'material-ui/Paper';
 import FlatButton from 'material-ui/FlatButton';
+import {signUp} from '../../public/scripts/fetch';
 
 export default
 class LoginScreen extends React.PureComponent {
@@ -40,6 +41,15 @@ class LoginScreen extends React.PureComponent {
           />
           <Divider />
         </Paper>
+        <FlatButton
+          label='sign up'
+          onTouchTap={() => signUp(
+            {
+              email: this.state.login,
+              password: this.state.password
+            }
+          )}
+        />
       </div>
     )
   }
